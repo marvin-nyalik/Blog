@@ -170,6 +170,8 @@ it will run the all the unit test of these project
 ## 🔭 Future Features <a name="future-features"></a>
 
 - [ ] Add the UI
+- [ ] Add a Database
+- [ ] Implement Business Logic
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
