@@ -1,1 +1,5 @@
-<h1>Here shows the specific post for a user</h1>
+<div class="post_spec">
+  <span class"header"> <h1> <%= @post.title %> by <%= @user.name %> </h1> <span>Comments: <%= @post.commentsCounter %> Likes: <%= @post.likesCounter %> </span></span>
+  <p> <%= @post.text %> </p>
+  <%= render 'shared/comment', comments: @comments %>
+</div>

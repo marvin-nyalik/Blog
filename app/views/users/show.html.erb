@@ -1,1 +1,17 @@
-<h1>A specific user details</h1>
+<%= render 'shared/user', user:@user %>
+
+<section class="bio">
+  <div class="showcase">
+    <h2>Bio</h2>
+    <p><%= @user.bio %></p>
+  </div>
+  <% @posts.each do |post| %>
+    <div class="post">
+      <h4>Post</h4>
+      <h5> <%= link_to post.title, user_post_url(@user, post) %> </h5>
+      <%= render 'shared/post', post:post %>
+    </div>
+  <% end %>
+
+  <button> <%= link_to "See all posts", user_posts_path(@user) %></button>
+</section>
