@@ -1,0 +1,52 @@
+.container {
+  width: 80vw;
+  height: 20vh;
+  margin: 50px auto;
+  display: flex;
+  border: 1px solid lightgray;
+  border-radius: 15px;
+}
+
+.details {
+  width: 70%;
+}
+
+.bio {
+  width: 80vw;
+  margin: 50px auto;
+}
+
+.showcase {
+  border: 1px solid lightgray;
+  padding: 20px;
+}
+
+.post {
+  border: 1px solid lightgray;
+  margin: 10px auto;
+  padding: 20px;
+}
+
+.post_spec {
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.posts {
+  width: 80vw;
+  margin: 10px auto;
+}
+
+.ind {
+  border: 1px solid lightgray;
+  padding: 20px;
+  margin: 10px auto;
+}
