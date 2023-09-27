@@ -50,3 +50,12 @@
   padding: 20px;
   margin: 10px auto;
 }
+
+.create {
+  width: 80vw;
+  margin: 20px auto;
+  display: flex;
+  justify-content: flex-end;
+  text-decoration: none;
+  color: cadetblue;
+}
