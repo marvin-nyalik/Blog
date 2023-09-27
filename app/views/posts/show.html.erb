@@ -1,5 +1,11 @@
+<h3 class="create"><%= link_to 'Add comment to this post', new_user_post_comment_path(user_id: current_user.id, post_id: @post.id) %></h3>
 <div class="post_spec">
-  <span class"header"> <h1> <%= @post.title %> by <%= @user.name %> </h1> <span>Comments: <%= @post.comments.count %> Likes: <%= @post.likesCounter %> </span></span>
+  <span class"header"> <h1> <%= @post.title %> by <%= @user.name %> </h1> <span>Comments: <%= @post.comments.count %> Likes: <%= @post.likes.count %> </span></span>
   <p> <%= @post.text %> </p>
+
+  <%= form_with model: @like, url:user_post_likes_path(post_id: @post.id) do |l| %>
+    <%= l.submit  "Like", class:"new-post-btn submit-btn"%>
+  <% end %>
+   
   <%= render 'shared/comment', comments: @comments %>
 </div>

@@ -1,0 +1,11 @@
+<section class=new-post-container>
+    <h1>Add a new Comment</h1>
+    <%= form_with model: @comment, url: user_post_comments_path do |form| %>
+        <%= form.label :text %>
+        <%= form.text_field :text %><br> 
+        
+        <%= form.hidden_field :post_id, value: params[:post_id] %>
+
+        <%= form.submit "Submit"%>
+    <% end %>
+</section>
