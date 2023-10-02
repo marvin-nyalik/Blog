@@ -33,7 +33,6 @@ RSpec.feature 'User Show Page' do
     expect(page).to have_content(@user1.bio)
   end
 
-
   scenario 'I can see a button to view user\'s posts' do
     visit user_path(@user1)
 
