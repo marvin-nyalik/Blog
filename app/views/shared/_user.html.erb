@@ -1,7 +1,7 @@
 <div class="container">
-    <img src= <% user.photo %> alt="avatar.jpg"/>
+    <img src= <%= user.photo %> alt="avatar.jpg"/>
     <div class="details">
         <h1> <%= link_to user.name, user_path(user) %> </h1>
-        <p>Number of posts: <%= user.posts.count %> </p>
+        <p>Number of posts: <%= user.postsCounter %> </p>
     </div>
 </div>

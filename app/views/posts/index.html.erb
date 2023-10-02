@@ -1,5 +1,4 @@
 <%= render 'shared/user', user:@user %>
-
 <div class="posts">
 <% @posts.each do |post| %>
   <div class="ind">
@@ -8,4 +7,5 @@
     <%= render 'shared/comment', comments: post.recent_comments %>
   </div>
 <% end %>
+<%= will_paginate @posts %>
 </div>
