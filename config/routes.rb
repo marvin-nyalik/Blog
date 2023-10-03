@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
+  devise_scope :user do
+    root to: "devise/sessions#new"
+  end
+  devise_for :users, controllers: {
+    registrations: 'users/registrations'
+  }
   # Defines the root path route ("/")
   # root "articles#index"
   resources :users, only: [:index, :show] do
@@ -9,5 +14,4 @@ Rails.application.routes.draw do
     resources :comments, only: [:create, :new]
   end
   end
-
 end
