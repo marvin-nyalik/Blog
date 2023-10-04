@@ -1,34 +1,37 @@
-<h2>Sign up</h2>
-
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.label :email, class: "custom-label" %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "custom-in" %>
+    <!-- Add a closing double quote here -------------------^ -->
   </div>
 
   <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= f.label :name, class: "custom-label" %><br />
+    <%= f.text_field :name, class: "custom-in" %>
+    <!-- Add a closing double quote here -------------------^ -->
   </div>
 
   <div class="field">
-    <%= f.label :password %>
+    <%= f.label :password, class: "custom-label" %>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
+    <%= f.password_field :password, autocomplete: "new-password", class: "custom-in" %>
+    <!-- Add a closing double quote here -------------------^ -->
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <%= f.label :password_confirmation, class: "custom-label" %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "custom-in" %>
+    <!-- Add a closing double quote here -------------------^ -->
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "Sign up", class: "form-button" %>
   </div>
 <% end %>
-
-<%= render "devise/shared/links" %>
+<div class="links">
+  <%= render "devise/shared/links" %>
+</div>
