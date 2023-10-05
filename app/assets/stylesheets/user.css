@@ -59,3 +59,79 @@
   text-decoration: none;
   color: cadetblue;
 }
+
+form {
+  width: 30vw;
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+input {
+  width: 100%;
+  margin-top: 5px;
+}
+
+.field {
+  width: 100%;
+  margin: 20px auto;
+}
+
+.actions {
+  margin-bottom: 10px;
+}
+
+.custom-in {
+  width: 90%;
+  margin: 5px auto;
+}
+
+.like-delete {
+  width: 50%;
+  height: 5vh;
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  top: -5vh;
+}
+
+.delete {
+  width: 50px;
+  padding: 2px 4px;
+}
+
+.comdelete {
+  width: 50px;
+  padding: 2px 4px;
+  position: relative;
+  top: -8vh;
+  left: -25vw;
+}
+
+.wrapper {
+  margin: 20px 0;
+  margin-bottom: 0;
+  height: 90px;
+}
+
+.links {
+  width: 30vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.form-button {
+  width: auto;
+}
+
+.check {
+  margin-left: -47%;
+}
+
+.rem {
+  position: relative;
+  left: -180px;
+}

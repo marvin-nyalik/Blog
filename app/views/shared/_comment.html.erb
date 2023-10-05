@@ -1,6 +1,12 @@
 <div>
   <% comments.each do |comment|%>
-  <h4><%= comment.user.name %></h4>
-  <p><%= comment.text %></p>
+  <div class="wrapper">
+    <h4><%= comment.user.name %></h4>
+    <p><%= comment.text %></p>
+    <% if @ability.can? :delete, comment %> <%= form_with model: @comment, url:
+    user_post_comment_path(comment.post.author_id,comment.post.id,comment.id),
+    method: :delete do |form| %> <%= form.submit "delete", class: "comdelete" %>
+    <% end %> <% end %>
+  </div>
   <% end %>
 </div>
