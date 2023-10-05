@@ -3,7 +3,11 @@ class PostsController < ApplicationController
     # return all posts for a user
     @user = User.includes(posts: :comments).find(params[:user_id])
     @posts = @user.posts.paginate(page: params[:page], per_page: 3)
-    # @posts = @user.posts
+
+    respond_to do |format|
+      format.html { render 'index' }
+      format.json { render json: @posts }
+    end
   end
 
   def show

@@ -3,15 +3,30 @@ class CommentsController < ApplicationController
     @comment = Comment.new
   end
 
+  def index
+    @post = Post.find(params[:post_id])
+    @comments = @post.comments
+
+    respond_to do |format|
+      format.json { render json: @comments }
+    end
+  end
+
   def create
-    @post = Post.find(params[:comment][:post_id])
+    @post = Post.find(params[:post_id])
     @comment = @post.comments.build(comment_params)
     @comment.user_id = current_user.id
 
     if @comment.save
-      redirect_to user_post_path(current_user, @post)
+      respond_to do |format|
+        format.html { redirect_to user_post_path(current_user, @post) }
+        format.json { render json: { message: 'Comment added' }, status: :created }
+      end
     else
-      render 'new'
+      respond_to do |format|
+        format.html { render 'new' }
+        format.json { render json: { errors: @comment.errors.full_messages }, status: :unprocessable_entity }
+      end
     end
   end
 
